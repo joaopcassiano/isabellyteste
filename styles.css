@@ -120,6 +120,7 @@ button:hover {
 .mensagem-container p {
   color: white; /* Texto branco */
   font-size: 16px;
+  font-style: italic;
   line-height: 1.5;
 }
 
