@@ -1,0 +1,152 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ffc0cb; /* Fundo rosa claro */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos da primeira página */
+.home {
+  padding: 50px;
+  background-color: #ffc0cb; /* Fundo rosa claro */
+  height: 100vh; /* Faz a tela ocupar toda a altura */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Título branco na primeira tela */
+.home h2 {
+  color: white; /* Título em branco */
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Botão estilizado */
+button {
+  background-color: white; /* Fundo branco */
+  color: black; /* Texto preto */
+  padding: 15px 25px; /* Aumenta o tamanho para toque */
+  border: 2px solid black; /* Adiciona uma borda preta */
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px; /* Bordas arredondadas */
+  transition: 0.3s ease-in-out; /* Efeito suave */
+}
+
+/* Efeito ao passar o mouse */
+button:hover {
+  background-color: black; /* Fundo preto */
+  color: white; /* Texto branco */
+}
+
+/* Estilos da segunda página */
+.nova-tela {
+  padding: 30px;
+  background-color: #ffc0cb; /* Fundo rosa claro */
+  min-height: 100vh; /* Garante que toda a tela fique rosa */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Título branco na segunda tela */
+.nova-tela h2 {
+  color: white; /* Título em branco */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Texto branco na segunda tela */
+.nova-tela p {
+  color: white; /* Texto branco */
+  font-size: 16px;
+}
+
+/* Linha separadora */
+.linha-separadora {
+  width: 80%;
+  height: 2px;
+  background-color: white; /* Cor branca */
+  margin: 20px auto; /* Espaçamento */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Estilos do player do Spotify */
+.spotify-container {
+  margin: 20px auto;
+  width: 90%;
+}
+
+/* Estilos do slider de fotos */
+.slider-container {
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ajuste para garantir que todas as imagens tenham tamanho fixo */
+.slider-container img {
+  width: 100%; /* Ajusta para ocupar toda a largura */
+  max-width: 400px; /* Define um tamanho máximo */
+  height: auto; /* Mantém proporção */
+  object-fit: cover; /* Ajusta a imagem sem distorcer */
+  display: none;
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilos do contador */
+.contador-container {
+  margin-top: 20px;
+}
+
+/* Estilos da mensagem de amor */
+.mensagem-container {
+  margin-top: 40px;
+  padding: 15px;
+  background-color: transparent; /* Fundo transparente */
+  border-radius: 10px;
+}
+
+/* Texto da mensagem */
+.mensagem-container p {
+  color: white; /* Texto branco */
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* 🔹 Responsividade para telas menores */
+@media screen and (max-width: 600px) {
+  .home h2 {
+    font-size: 22px; /* Reduz tamanho do título */
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px 20px; /* Ajusta tamanho do botão */
+  }
+
+  .nova-tela h2 {
+    font-size: 20px; /* Reduz tamanho do título */
+  }
+
+  .nova-tela p {
+    font-size: 14px; /* Reduz tamanho do texto */
+  }
+
+  .slider-container img {
+    max-width: 300px; /* Ajusta tamanho das imagens */
+  }
+
+  .mensagem-container p {
+    font-size: 14px; /* Ajusta tamanho do texto */
+  }
+}
