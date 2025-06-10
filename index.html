@@ -10,6 +10,12 @@
       type="image/png"
       href="https://cdn-icons-png.flaticon.com/512/833/833472.png"
     />
+
+    <!-- Swiper.js CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div class="home">
@@ -31,20 +37,45 @@
         ></iframe>
       </div>
 
-      <!-- Slider de fotos -->
-      <div class="slider-container">
-        <div class="slider">
-          <img src="images/foto1.jpeg" alt="Foto 1" />
-          <img src="images/foto2.jpeg" alt="Foto 2" />
-          <img src="images/foto3.jpeg" alt="Foto 3" />
-          <img src="images/foto4.jpeg" alt="Foto 4" />
-          <img src="images/foto5.jpeg" alt="Foto 5" />
-          <img src="images/foto6.jpeg" alt="Foto 6" />
-          <img src="images/foto7.jpeg" alt="Foto 7" />
-          <img src="images/foto8.jpeg" alt="Foto 8" />
-          <img src="images/foto9.jpeg" alt="Foto 9" />
-          <img src="images/foto10.jpeg" alt="Foto 10" />
+      <!-- Slider de fotos com Swiper -->
+      <div class="slider-container swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/foto1.jpeg" alt="Foto 1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/foto2.jpeg" alt="Foto 2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/foto3.jpeg" alt="Foto 3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/foto4.jpeg" alt="Foto 4" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/foto5.jpeg" alt="Foto 5" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/foto6.jpeg" alt="Foto 6" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/foto7.jpeg" alt="Foto 7" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/foto8.jpeg" alt="Foto 8" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/foto9.jpeg" alt="Foto 9" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/foto10.jpeg" alt="Foto 10" />
+          </div>
         </div>
+        <!-- Botões de navegação -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- Paginação -->
+        <div class="swiper-pagination"></div>
       </div>
 
       <!-- Contador -->
@@ -81,6 +112,12 @@
         </p>
       </div>
     </div>
+
+    <!-- 🔹 Container para os corações caindo -->
+    <div id="heartContainer"></div>
+
+    <!-- Swiper.js JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
   </body>

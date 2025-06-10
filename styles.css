@@ -5,50 +5,58 @@ body {
   background-color: #ffc0cb; /* Fundo rosa claro */
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* 🔹 Evita rolagem horizontal */
 }
 
 /* Estilos da primeira página */
 .home {
-  padding: 50px;
-  background-color: #ffc0cb; /* Fundo rosa claro */
-  height: 100vh; /* Faz a tela ocupar toda a altura */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* 🔹 Centraliza verticalmente */
+  align-items: center; /* 🔹 Centraliza horizontalmente */
+  height: 100vh; /* 🔹 Faz a seção ocupar toda a altura da tela */
+  width: 100vw; /* 🔹 Garante que ocupe toda a largura */
+  text-align: center;
+  background-color: #ffc0cb; /* Fundo rosa claro */
+  padding: 0;
+  margin: 0;
 }
 
 /* Título branco na primeira tela */
 .home h2 {
-  color: white; /* Título em branco */
+  color: white;
   font-size: 28px;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 /* Botão estilizado */
 button {
-  background-color: white; /* Fundo branco */
-  color: black; /* Texto preto */
-  padding: 15px 25px; /* Aumenta o tamanho para toque */
-  border: 2px solid black; /* Adiciona uma borda preta */
+  background-color: white;
+  color: black;
+  padding: 15px 25px;
+  border: 2px solid white;
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  border-radius: 8px; /* Bordas arredondadas */
-  transition: 0.3s ease-in-out; /* Efeito suave */
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Efeito ao passar o mouse */
 button:hover {
-  background-color: black; /* Fundo preto */
-  color: white; /* Texto branco */
+  border-color: #ffc0cb;
+  color: #ffc0cb;
+  transform: scale(1.1);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilos da segunda página */
 .nova-tela {
   padding: 30px;
-  background-color: #ffc0cb; /* Fundo rosa claro */
-  min-height: 100vh; /* Garante que toda a tela fique rosa */
+  background-color: #ffc0cb;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,14 +65,14 @@ button:hover {
 
 /* Título branco na segunda tela */
 .nova-tela h2 {
-  color: white; /* Título em branco */
+  color: white;
   font-size: 24px;
   font-weight: bold;
 }
 
 /* Texto branco na segunda tela */
 .nova-tela p {
-  color: white; /* Texto branco */
+  color: white;
   font-size: 16px;
 }
 
@@ -72,53 +80,94 @@ button:hover {
 .linha-separadora {
   width: 80%;
   height: 2px;
-  background-color: white; /* Cor branca */
-  margin: 20px auto; /* Espaçamento */
-  border-radius: 5px; /* Bordas arredondadas */
+  background-color: white;
+  margin: 20px auto;
+  border-radius: 5px;
 }
 
 /* Estilos do player do Spotify */
 .spotify-container {
   margin: 20px auto;
   width: 90%;
+  margin-bottom: 80px;
 }
 
-/* Estilos do slider de fotos */
+/* 🔹 Centralizando apenas o slider */
 .slider-container {
-  overflow: hidden;
   width: 90%;
-  margin: auto;
+  height: 550px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Ajuste para garantir que todas as imagens tenham tamanho fixo */
-.slider-container img {
-  width: 100%; /* Ajusta para ocupar toda a largura */
-  max-width: 400px; /* Define um tamanho máximo */
-  height: auto; /* Mantém proporção */
-  object-fit: cover; /* Ajusta a imagem sem distorcer */
-  display: none;
-  border-radius: 10px; /* Bordas arredondadas */
+/* Ajuste para centralizar as imagens dentro do slider */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* 🔹 Faz a imagem preencher todo o container */
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+  display: block;
+}
+
+/* Remover setas de navegação do Swiper */
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+
+/* Paginação do Swiper */
+.swiper-pagination-bullet {
+  background-color: white;
 }
 
 /* Estilos do contador */
 .contador-container {
-  margin-top: 20px;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* 🔹 Estilização do texto "Eu te amo há:" */
+.contador-container p {
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* 🔹 Estilização do contador */
+#contador {
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 /* Estilos da mensagem de amor */
 .mensagem-container {
   margin-top: 40px;
   padding: 15px;
-  background-color: transparent; /* Fundo transparente */
+  background-color: transparent;
   border-radius: 10px;
 }
 
 /* Texto da mensagem */
 .mensagem-container p {
-  color: white; /* Texto branco */
+  color: white;
   font-size: 16px;
   font-style: italic;
   line-height: 1.5;
@@ -127,27 +176,97 @@ button:hover {
 /* 🔹 Responsividade para telas menores */
 @media screen and (max-width: 600px) {
   .home h2 {
-    font-size: 22px; /* Reduz tamanho do título */
+    font-size: 22px;
   }
 
   button {
     font-size: 16px;
-    padding: 12px 20px; /* Ajusta tamanho do botão */
+    padding: 12px 20px;
   }
 
   .nova-tela h2 {
-    font-size: 20px; /* Reduz tamanho do título */
+    font-size: 20px;
   }
 
   .nova-tela p {
-    font-size: 14px; /* Reduz tamanho do texto */
+    font-size: 14px;
   }
 
-  .slider-container img {
-    max-width: 300px; /* Ajusta tamanho das imagens */
+  .slider-container {
+    height: 400px;
+    margin-top: 10px;
+  }
+
+  .contador-container {
+    margin-top: 40px;
+    padding: 15px;
+  }
+
+  .contador-container p,
+  #contador {
+    font-size: 16px;
+  }
+
+  .swiper-slide img {
+    border-radius: 30px;
   }
 
   .mensagem-container p {
-    font-size: 14px; /* Ajusta tamanho do texto */
+    font-size: 14px;
+  }
+}
+
+/* 🔹 Estilos para os corações caindo */
+#heartContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none; /* 🔹 Evita interferência com cliques */
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  font-size: 30px;
+  color: red;
+  animation: fall 4s linear infinite; /* 🔹 Animação de queda */
+}
+
+/* 🔹 Animação dos corações caindo */
+@keyframes fall {
+  0% {
+    transform: translateY(-10%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* 🔹 Estilos para o coração que aparece no clique */
+.click-heart {
+  position: absolute;
+  font-size: 30px;
+  color: red;
+  animation: pop 2s ease-in-out;
+  pointer-events: none; /* 🔹 Evita interferência com cliques */
+}
+
+/* 🔹 Animação do coração no clique */
+@keyframes pop {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
   }
 }
