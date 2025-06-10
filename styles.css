@@ -85,11 +85,10 @@ button:hover {
   border-radius: 5px;
 }
 
-/* Estilos do player do Spotify */
-.spotify-container {
-  margin: 20px auto;
-  width: 90%;
-  margin-bottom: 80px;
+/* 🔹 Estilos do player do YouTube com cantos arredondados */
+.youtube-container iframe {
+  border-radius: 15px; /* 🔹 Arredonda os cantos */
+  overflow: hidden; /* 🔹 Garante que o conteúdo não ultrapasse os cantos arredondados */
 }
 
 /* 🔹 Centralizando apenas o slider */

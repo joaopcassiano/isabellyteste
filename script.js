@@ -2,11 +2,7 @@ document
   .getElementById("startButton")
   .addEventListener("click", function (event) {
     createHeartAtClick(event); // 🔹 Cria um coração no clique
-  });
 
-document
-  .getElementById("startButton")
-  .addEventListener("mouseover", function () {
     let count = 5;
     const button = document.getElementById("startButton");
     const message = document.getElementById("message");
