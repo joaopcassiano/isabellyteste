@@ -44,31 +44,48 @@ function createHeartAtClick(event) {
   }, 2000);
 }
 
-// Contador de tempo desde 17/11/2021
+// 🔹 Atualiza o contador de tempo desde 17/11/2021
 function updateCounter() {
-  const startDate = new Date(2021, 11, 17); // 🔹 Corrigido para novembro do jeito certo
+  const startDate = new Date(2021, 10, 17); // Novembro é mês 10 (zero-based)
   const now = new Date();
 
-  // Calcula a diferença total em milissegundos
+  // 🔹 Calcula a diferença total em milissegundos
   const diff = now - startDate;
 
-  // Converte para unidades de tempo
+  // 🔹 Converte para unidades de tempo
   const seconds = Math.floor(diff / 1000) % 60;
   const minutes = Math.floor(diff / (1000 * 60)) % 60;
   const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24)) % 30;
-  const months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30)) % 12;
-  const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
 
-  document.getElementById(
-    "contador"
-  ).innerText = `${years} anos, ${months} meses, ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos.`;
+  // 🔹 Calcula anos, meses e dias corretamente
+  let diffYears = now.getFullYear() - startDate.getFullYear();
+  let diffMonths = now.getMonth() - startDate.getMonth();
+  let diffDays = now.getDate() - startDate.getDate();
+
+  if (diffDays < 0) {
+    diffMonths--;
+    const lastMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+    diffDays += lastMonth.getDate();
+  }
+
+  if (diffMonths < 0) {
+    diffYears--;
+    diffMonths += 12;
+  }
+
+  // 🔹 Atualiza os valores na tela
+  document.getElementById("anos").innerText = diffYears;
+  document.getElementById("meses").innerText = diffMonths;
+  document.getElementById("dias").innerText = diffDays;
+  document.getElementById("horas").innerText = hours;
+  document.getElementById("minutos").innerText = minutes;
+  document.getElementById("segundos").innerText = seconds;
 }
 
-// Atualiza o contador a cada segundo
+// 🔹 Atualiza o contador a cada segundo
 setInterval(updateCounter, 1000);
 
-// Inicializa o Swiper.js para o slider de imagens
+// 🔹 Inicializa o Swiper.js para o slider de imagens
 var swiper = new Swiper(".swiper", {
   loop: true,
   spaceBetween: 10,

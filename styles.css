@@ -12,12 +12,12 @@ body {
 .home {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* 🔹 Centraliza verticalmente */
-  align-items: center; /* 🔹 Centraliza horizontalmente */
-  height: 100vh; /* 🔹 Faz a seção ocupar toda a altura da tela */
-  width: 100vw; /* 🔹 Garante que ocupe toda a largura */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
   text-align: center;
-  background-color: #ffc0cb; /* Fundo rosa claro */
+  background-color: #ffc0cb;
   padding: 0;
   margin: 0;
 }
@@ -87,8 +87,8 @@ button:hover {
 
 /* 🔹 Estilos do player do YouTube com cantos arredondados */
 .youtube-container iframe {
-  border-radius: 15px; /* 🔹 Arredonda os cantos */
-  overflow: hidden; /* 🔹 Garante que o conteúdo não ultrapasse os cantos arredondados */
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 /* 🔹 Centralizando apenas o slider */
@@ -135,83 +135,74 @@ button:hover {
   background-color: white;
 }
 
-/* Estilos do contador */
+/* 🔹 Contêiner do contador */
 .contador-container {
   margin-top: 50px;
   padding: 20px;
   border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* 🔹 Estilização do texto "Eu te amo há:" */
+/* 🔹 Texto "Eu te amo há:" */
 .contador-container p {
   color: black;
   font-weight: 600;
   font-size: 18px;
+  margin-bottom: 10px;
 }
 
-/* 🔹 Estilização do contador */
-#contador {
-  color: black;
-  font-weight: 600;
-  font-size: 18px;
+/* 🔹 Layout das caixas do contador */
+.contador {
+  display: flex;
+  gap: 15px;
 }
 
-/* Estilos da mensagem de amor */
-.mensagem-container {
-  margin-top: 40px;
+/* 🔹 Estilização das caixas individuais */
+.contador-item {
+  background-color: #ffc0cb;
   padding: 15px;
-  background-color: transparent;
   border-radius: 10px;
+  text-align: center;
+  width: 80px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Texto da mensagem */
-.mensagem-container p {
+/* 🔹 Números grandes */
+.contador-item span {
+  font-size: 24px;
+  font-weight: bold;
   color: white;
-  font-size: 16px;
-  font-style: italic;
-  line-height: 1.5;
 }
 
-/* 🔹 Responsividade para telas menores */
+/* 🔹 Texto abaixo dos números */
+.contador-item p {
+  font-size: 14px;
+  color: white;
+  margin-top: 5px;
+}
+
+/* 🔹 Responsividade */
 @media screen and (max-width: 600px) {
-  .home h2 {
-    font-size: 22px;
+  .contador {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  button {
-    font-size: 16px;
-    padding: 12px 20px;
+  .contador-item {
+    width: 60px;
+    padding: 10px;
   }
 
-  .nova-tela h2 {
+  .contador-item span {
     font-size: 20px;
   }
 
-  .nova-tela p {
-    font-size: 14px;
-  }
-
-  .slider-container {
-    height: 400px;
-    margin-top: 10px;
-  }
-
-  .contador-container {
-    margin-top: 40px;
-    padding: 15px;
-  }
-
-  .contador-container p,
-  #contador {
-    font-size: 16px;
-  }
-
-  .swiper-slide img {
-    border-radius: 30px;
-  }
-
-  .mensagem-container p {
-    font-size: 14px;
+  .contador-item p {
+    font-size: 12px;
   }
 }
 
@@ -222,7 +213,7 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100vh;
-  pointer-events: none; /* 🔹 Evita interferência com cliques */
+  pointer-events: none;
   overflow: hidden;
 }
 
@@ -230,7 +221,7 @@ button:hover {
   position: absolute;
   font-size: 30px;
   color: red;
-  animation: fall 4s linear infinite; /* 🔹 Animação de queda */
+  animation: fall 4s linear infinite;
 }
 
 /* 🔹 Animação dos corações caindo */
@@ -251,7 +242,7 @@ button:hover {
   font-size: 30px;
   color: red;
   animation: pop 2s ease-in-out;
-  pointer-events: none; /* 🔹 Evita interferência com cliques */
+  pointer-events: none;
 }
 
 /* 🔹 Estilos do pop-up */
@@ -292,6 +283,11 @@ button:hover {
   font-size: 30px;
   cursor: pointer;
   color: black;
+}
+
+/* 🔹 Espaçamento maior entre o título e o contador */
+.contador-container p {
+  margin-bottom: 20px; /* Aumente o valor conforme necessário */
 }
 
 /* 🔹 Animação do coração no clique */
