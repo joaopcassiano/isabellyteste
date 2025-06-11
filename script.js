@@ -109,10 +109,14 @@ function startHeartAnimation() {
   setTimeout(() => {
     clearInterval(heartInterval);
   }, 5000);
-
-  // 🔹 Evento do botão quadrado para redirecionar
-  document.getElementById("novoBotao").addEventListener("click", function () {
-    window.location.href =
-      "https://drive.google.com/file/d/1JcDrPAArvme9_ckdddUsqkt7rWIcpsqJ/view";
-  });
 }
+
+// 🔹 Evento do botão para abrir o pop-up com a imagem
+document.getElementById("novoBotao").addEventListener("click", function () {
+  document.getElementById("popup").style.display = "flex";
+});
+
+// 🔹 Evento para fechar o pop-up ao clicar no "X"
+document.getElementById("closePopup").addEventListener("click", function () {
+  document.getElementById("popup").style.display = "none";
+});
