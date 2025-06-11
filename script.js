@@ -46,7 +46,7 @@ function createHeartAtClick(event) {
 
 // Contador de tempo desde 17/11/2021
 function updateCounter() {
-  const startDate = new Date(2021, 11, 17); // 🔹 Corrigido para novembro
+  const startDate = new Date(2021, 11, 17); // 🔹 Corrigido para novembro do jeito certo
   const now = new Date();
 
   // Calcula a diferença total em milissegundos
