@@ -109,4 +109,10 @@ function startHeartAnimation() {
   setTimeout(() => {
     clearInterval(heartInterval);
   }, 5000);
+
+  // 🔹 Evento do botão quadrado para redirecionar
+  document.getElementById("novoBotao").addEventListener("click", function () {
+    window.location.href =
+      "https://drive.google.com/file/d/1JcDrPAArvme9_ckdddUsqkt7rWIcpsqJ/view";
+  });
 }
